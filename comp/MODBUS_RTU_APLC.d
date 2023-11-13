@@ -1,0 +1,1 @@
+ comp/MODBUS_RTU_APLC.d  comp/MODBUS_RTU_APLC.p1:  MODBUS_RTU_APLC.c MODBUS_RTU_APLC.h AutoPLC.h AutoPLC_config.h fuses.h

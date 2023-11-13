@@ -1,0 +1,578 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$comp\startup.o
+idloc IDLOC 5 200000 200000 8 1
+init CODE 0 4 4 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 4 300000 300000 E 1
+$comp\main.o
+cinit CODE 0 2D08 2D08 6 1
+idloc IDLOC 5 200000 200000 8 1
+text0 CODE 0 2D1E 2D1E 12 1
+text1 CODE 0 2DBE 2DBE 36 1
+text2 CODE 0 2D8C 2D8C 32 1
+text3 CODE 0 2D16 2D16 8 1
+text4 CODE 0 2F0A 2F0A F6 1
+text5 CODE 0 2DF4 2DF4 42 1
+text6 CODE 0 2E36 2E36 48 1
+text7 CODE 0 2E7E 2E7E 8C 1
+text8 CODE 0 2D02 2D02 6 1
+text9 CODE 0 2D30 2D30 1A 1
+text10 CODE 0 2D0E 2D0E 8 1
+text11 CODE 0 2D4A 2D4A 20 1
+text12 CODE 0 2D6A 2D6A 22 1
+cstackCOMRAMh COMRAM 1 1 1 1E 1
+nvCOMRAMh COMRAM 1 1F 1F 2 1
+config CONFIG 4 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-7FF 1
+SFR F60-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 8-2D01 1
+CONST 3000-3000 1
+STACK 60-7FF 1
+SMALLCONST 800-2D01 1
+SMALLCONST 3000-3000 1
+CODE 8-2D01 1
+CODE 3000-3000 1
+BIGRAM 21-7FF 1
+COMRAM 21-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 800-2D01 1
+MEDIUMCONST 3000-3000 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$comp\startup.o
+4 init CODE >92:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\comp\startup.s
+0 reset_vec CODE >70:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\comp\startup.s
+$comp\main.o
+2D6A text12 CODE >258:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D6A text12 CODE >260:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D6C text12 CODE >261:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D70 text12 CODE >262:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D74 text12 CODE >263:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D78 text12 CODE >264:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D7A text12 CODE >266:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D7C text12 CODE >267:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D80 text12 CODE >268:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D84 text12 CODE >269:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D88 text12 CODE >270:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D8A text12 CODE >271:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D4A text11 CODE >272:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D4A text11 CODE >274:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D4E text11 CODE >275:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D52 text11 CODE >277:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D5C text11 CODE >278:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D60 text11 CODE >279:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D64 text11 CODE >280:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D68 text11 CODE >281:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D0E text10 CODE >35:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D0E text10 CODE >37:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D10 text10 CODE >38:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D12 text10 CODE >39:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D14 text10 CODE >40:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D30 text9 CODE >48:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D30 text9 CODE >51:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D32 text9 CODE >52:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D34 text9 CODE >53:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D36 text9 CODE >54:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D3A text9 CODE >55:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D3E text9 CODE >70:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D40 text9 CODE >71:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D42 text9 CODE >72:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D44 text9 CODE >73:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D48 text9 CODE >74:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D02 text8 CODE >6:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+2D02 text8 CODE >8:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+2D06 text8 CODE >9:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+2E7E text7 CODE >111:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E80 text7 CODE >113:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E84 text7 CODE >116:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E8A text7 CODE >118:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2EC8 text7 CODE >119:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2ECC text7 CODE >120:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2ECC text7 CODE >121:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2ED0 text7 CODE >123:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2EE6 text7 CODE >124:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2EE8 text7 CODE >125:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2EEE text7 CODE >119:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2EF6 text7 CODE >116:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F00 text7 CODE >128:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F08 text7 CODE >130:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E36 text6 CODE >25:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E36 text6 CODE >27:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E3A text6 CODE >32:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E3E text6 CODE >35:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E40 text6 CODE >36:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E44 text6 CODE >37:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E48 text6 CODE >38:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E4A text6 CODE >40:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E4C text6 CODE >48:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E50 text6 CODE >50:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E62 text6 CODE >51:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E64 text6 CODE >52:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E66 text6 CODE >53:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E6A text6 CODE >54:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E6E text6 CODE >40:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E78 text6 CODE >61:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E7A text6 CODE >62:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E7C text6 CODE >63:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2DF4 text5 CODE >4:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2DF6 text5 CODE >8:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2DFA text5 CODE >9:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2DFC text5 CODE >10:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E00 text5 CODE >11:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E04 text5 CODE >12:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E06 text5 CODE >13:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E0A text5 CODE >14:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E0C text5 CODE >15:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E0E text5 CODE >17:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E14 text5 CODE >19:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E24 text5 CODE >20:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E28 text5 CODE >21:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2E2A text5 CODE >17:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F0A text4 CODE >65:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F0C text4 CODE >71:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F10 text4 CODE >72:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F14 text4 CODE >73:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F18 text4 CODE >74:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F1C text4 CODE >75:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F20 text4 CODE >76:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F24 text4 CODE >78:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F32 text4 CODE >80:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F36 text4 CODE >81:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F3A text4 CODE >83:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F40 text4 CODE >84:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F4C text4 CODE >86:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F54 text4 CODE >88:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F5E text4 CODE >90:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2F6E text4 CODE >92:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2FAA text4 CODE >94:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2FB4 text4 CODE >96:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2FC4 text4 CODE >98:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2FCE text4 CODE >100:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2FDE text4 CODE >102:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2FEC text4 CODE >104:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2FF6 text4 CODE >106:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2FF6 text4 CODE >108:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2FFE text4 CODE >109:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+2D16 text3 CODE >41:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D16 text3 CODE >43:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D18 text3 CODE >44:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D1A text3 CODE >45:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D1C text3 CODE >46:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D8C text2 CODE >126:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D8C text2 CODE >129:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D90 text2 CODE >130:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D94 text2 CODE >131:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D98 text2 CODE >134:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D9A text2 CODE >135:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D9C text2 CODE >136:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D9E text2 CODE >138:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2DA0 text2 CODE >140:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2DA4 text2 CODE >141:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2DA8 text2 CODE >142:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2DAA text2 CODE >145:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2DAC text2 CODE >147:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2DB0 text2 CODE >150:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2DB4 text2 CODE >151:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2DB8 text2 CODE >152:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2DBC text2 CODE >154:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2DBE text1 CODE >11:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+2DBE text1 CODE >13:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+2DE0 text1 CODE >14:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+2DEA text1 CODE >16:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+2DEE text1 CODE >17:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+2DF2 text1 CODE >19:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+2D1E text0 CODE >286:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D1E text0 CODE >288:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D22 text0 CODE >289:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D26 text0 CODE >303:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D2A text0 CODE >307:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+2D08 cinit CODE >1264:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\comp\main.s
+2D08 cinit CODE >1266:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\comp\main.s
+2D08 cinit CODE >1269:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\comp\main.s
+2D08 cinit CODE >1275:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\comp\main.s
+2D08 cinit CODE >1277:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\comp\main.s
+2D0A cinit CODE >1278:D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\comp\main.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_Z 1F 0 COMRAM 1 nvCOMRAMh comp\main.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst comp\main.o
+__Hspace_0 3000 0 ABS 0 - comp\main.o
+__Hspace_1 21 0 ABS 0 - comp\main.o
+__Hspace_2 0 0 ABS 0 - comp\main.o
+__Hspace_4 60000E 0 ABS 0 - comp\main.o
+__Hibigdata 0 0 CODE 0 ibigdata comp\main.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst comp\startup.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data comp\main.o
+__LnvCOMRAMh 0 0 ABS 0 nvCOMRAMh comp\main.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst comp\main.o
+_AOUT 1E8 0 ABS 0 - comp\main.o
+_DOUT 1E0 0 ABS 0 - comp\main.o
+_EAIN 1E6 0 ABS 0 - comp\main.o
+_LATA F89 0 ABS 0 - comp\main.o
+_LATB F8A 0 ABS 0 - comp\main.o
+_LATC F8B 0 ABS 0 - comp\main.o
+_LATD F8C 0 ABS 0 - comp\main.o
+_LATE F8D 0 ABS 0 - comp\main.o
+_SAIN 1E1 0 ABS 0 - comp\main.o
+___sp 0 0 STACK 2 stack comp\startup.o
+_loop 2DBE 0 CODE 0 text1 comp\main.o
+_main 2D1E 0 CODE 0 text0 comp\main.o
+start 4 0 CODE 0 init comp\startup.o
+__size_of_USART_ON 0 0 ABS 0 - comp\main.o
+__size_of_loop 0 0 ABS 0 - comp\main.o
+__size_of_main 0 0 ABS 0 - comp\main.o
+_GPIO_CONFIG 2D6A 0 CODE 0 text12 comp\main.o
+__end_of_USART_init 2D4A 0 CODE 0 text9 comp\main.o
+__end_of_REF_DIO 2DBE 0 CODE 0 text2 comp\main.o
+__Hpowerup 4 0 CODE 0 powerup comp\main.o
+__pcstackCOMRAMh 1 0 COMRAM 1 cstackCOMRAMh comp\main.o
+__pcstackCOMRAMl 0 0 COMRAM 1 cstackCOMRAMl comp\main.o
+_T0CONbits FD5 0 ABS 0 - comp\main.o
+__accesstop 60 0 ABS 0 - comp\startup.o
+intlevel0 0 0 CODE 0 text comp\startup.o
+intlevel1 0 0 CODE 0 text comp\startup.o
+intlevel2 0 0 CODE 0 text comp\startup.o
+intlevel3 0 0 CODE 0 text comp\startup.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM comp\main.o
+__Hifardata 0 0 CODE 0 ifardata comp\main.o
+__Hclrtext 0 0 ABS 0 clrtext comp\main.o
+__size_of_CRC_calc 0 0 ABS 0 - comp\main.o
+_USART_ON 2D0E 0 CODE 0 text10 comp\main.o
+_ADCON1 FC1 0 ABS 0 - comp\main.o
+_ADCON2 FC0 0 ABS 0 - comp\main.o
+___inthi_sp 0 0 STACK 2 stack comp\startup.o
+___intlo_sp 0 0 STACK 2 stack comp\startup.o
+__Hintcode_body 0 0 ABS 0 intcode_body comp\main.o
+__end_of_USART_ON 2D16 0 CODE 0 text10 comp\main.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs comp\main.o
+_BAUDCONbits FB8 0 ABS 0 - comp\main.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst comp\main.o
+CRC_calc@size A 0 COMRAM 1 cstackCOMRAMh comp\main.o
+__end_of_USART_OFF 2D1E 0 CODE 0 text3 comp\main.o
+__Hintcodelo 4 0 CODE 0 intcodelo comp\main.o
+__size_of_USART_OFF 0 0 ABS 0 - comp\main.o
+?_MODBUS_RW F 0 COMRAM 1 cstackCOMRAMh comp\main.o
+__end_of_config 2D08 0 CODE 0 text8 comp\main.o
+__size_of_REG_CONFIG 0 0 ABS 0 - comp\main.o
+_CRC_calc 2E7E 0 CODE 0 text7 comp\main.o
+_USART_OFF 2D16 0 CODE 0 text3 comp\main.o
+__Lintcodelo 4 0 CODE 0 intcodelo comp\main.o
+start_initialization 2D08 0 CODE 0 cinit comp\main.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM comp\main.o
+__end_of_CRC_calc 2F0A 0 CODE 0 text7 comp\main.o
+_TRISCbits F94 0 ABS 0 - comp\main.o
+___rparam_used 1 0 ABS 0 - comp\main.o
+_SPBRGH FB0 0 ABS 0 - comp\main.o
+_SSPBUF FC9 0 ABS 0 - comp\main.o
+isa$xinst 0 0 ABS 0 - comp\startup.o
+__size_of_USART_init 0 0 ABS 0 - comp\main.o
+MODBUS_TX@M_size 1 0 COMRAM 1 cstackCOMRAMh comp\main.o
+__Hbank0 0 0 ABS 0 bank0 comp\main.o
+__Hbank1 0 0 ABS 0 bank1 comp\main.o
+__Hbank2 0 0 ABS 0 bank2 comp\main.o
+__Hbank3 0 0 ABS 0 bank3 comp\main.o
+__Hbank4 0 0 ABS 0 bank4 comp\main.o
+__Hbank5 0 0 ABS 0 bank5 comp\main.o
+__Hbank6 0 0 ABS 0 bank6 comp\main.o
+__Hbank7 0 0 ABS 0 bank7 comp\main.o
+__Hcinit 0 0 ABS 0 cinit comp\main.o
+__Hconst 0 0 CONST 0 const comp\main.o
+__Hidata 0 0 CODE 0 idata comp\main.o
+__Hidloc 200008 0 IDLOC 5 idloc comp\main.o
+__Hnvbit 0 0 COMRAM 1 nvbit comp\main.o
+__Hparam 0 0 COMRAM 1 rparam comp\main.o
+__Hrdata 0 0 COMRAM 1 rdata comp\main.o
+__Hstack 0 0 STACK 2 stack comp\main.o
+__Htext0 0 0 ABS 0 text0 comp\main.o
+__Htext1 0 0 ABS 0 text1 comp\main.o
+__Htext2 0 0 ABS 0 text2 comp\main.o
+__Htext3 0 0 ABS 0 text3 comp\main.o
+__Htext4 0 0 ABS 0 text4 comp\main.o
+__Htext5 0 0 ABS 0 text5 comp\main.o
+__Htext6 0 0 ABS 0 text6 comp\main.o
+__Htext7 0 0 ABS 0 text7 comp\main.o
+__Htext8 0 0 ABS 0 text8 comp\main.o
+__Htext9 0 0 ABS 0 text9 comp\main.o
+__Hbigbss 0 0 BIGRAM 1 bigbss comp\main.o
+__Hbigram 0 0 ABS 0 bigram comp\main.o
+__smallconst 0 0 SMALLCONST 0 smallconst comp\startup.o
+__Hcomram 0 0 ABS 0 comram comp\main.o
+__Hconfig 30000E 0 CONFIG 4 config comp\main.o
+__Lbank0 0 0 ABS 0 bank0 comp\main.o
+__Lbank1 0 0 ABS 0 bank1 comp\main.o
+__Lbank2 0 0 ABS 0 bank2 comp\main.o
+__Lbank3 0 0 ABS 0 bank3 comp\main.o
+__Lbank4 0 0 ABS 0 bank4 comp\main.o
+__Lbank5 0 0 ABS 0 bank5 comp\main.o
+__Lbank6 0 0 ABS 0 bank6 comp\main.o
+__Lbank7 0 0 ABS 0 bank7 comp\main.o
+__Lcinit 0 0 ABS 0 cinit comp\main.o
+__Lconst 0 0 CONST 0 const comp\main.o
+__Lidata 0 0 CODE 0 idata comp\main.o
+__Lidloc 0 0 IDLOC 5 idloc comp\main.o
+__Lnvbit 0 0 COMRAM 1 nvbit comp\main.o
+__Lparam 0 0 COMRAM 1 rparam comp\main.o
+__Lrdata 0 0 COMRAM 1 rdata comp\main.o
+__Lstack 0 0 STACK 2 stack comp\main.o
+__Ltext0 0 0 ABS 0 text0 comp\main.o
+__Ltext1 0 0 ABS 0 text1 comp\main.o
+__Ltext2 0 0 ABS 0 text2 comp\main.o
+__Ltext3 0 0 ABS 0 text3 comp\main.o
+__Ltext4 0 0 ABS 0 text4 comp\main.o
+__Ltext5 0 0 ABS 0 text5 comp\main.o
+__Ltext6 0 0 ABS 0 text6 comp\main.o
+__Ltext7 0 0 ABS 0 text7 comp\main.o
+__Ltext8 0 0 ABS 0 text8 comp\main.o
+__Ltext9 0 0 ABS 0 text9 comp\main.o
+__Hfarbss 0 0 FARRAM 0 farbss comp\main.o
+__Lintcode_body 0 0 ABS 0 intcode_body comp\main.o
+_REF_DIO 2D8C 0 CODE 0 text2 comp\main.o
+_INTCONbits FF2 0 ABS 0 - comp\main.o
+__Habs1 0 0 ABS 0 abs1 comp\main.o
+__Hdata 0 0 ABS 0 data comp\main.o
+__Hinit 8 0 CODE 0 init comp\main.o
+__Hrbit 0 0 COMRAM 1 rbit comp\main.o
+__Hrbss 0 0 COMRAM 1 rbss comp\main.o
+__Htemp 0 0 COMRAM 1 temp comp\main.o
+__Htext 0 0 ABS 0 text comp\main.o
+__Labs1 0 0 ABS 0 abs1 comp\main.o
+__Ldata 0 0 ABS 0 data comp\main.o
+__Linit 4 0 CODE 0 init comp\main.o
+__Lrbit 0 0 COMRAM 1 rbit comp\main.o
+__Lrbss 0 0 COMRAM 1 rbss comp\main.o
+__Ltemp 0 0 COMRAM 1 temp comp\main.o
+__Ltext 0 0 ABS 0 text comp\main.o
+MODBUS_RW@N 12 0 COMRAM 1 cstackCOMRAMh comp\main.o
+MODBUS_RX@i 1 0 COMRAM 1 cstackCOMRAMh comp\main.o
+MODBUS_TX@i 2 0 COMRAM 1 cstackCOMRAMh comp\main.o
+MODBUS_RW@C_byte 1D 0 COMRAM 1 cstackCOMRAMh comp\main.o
+__end_of_GPIO_CONFIG 2D8C 0 CODE 0 text12 comp\main.o
+__Hintret 0 0 ABS 0 intret comp\main.o
+MODBUS_RW@CRC 1B 0 COMRAM 1 cstackCOMRAMh comp\main.o
+__Hirdata 0 0 CODE 0 irdata comp\main.o
+_AIN 1F0 0 ABS 0 - comp\main.o
+_DIN 1DF 0 ABS 0 - comp\main.o
+__S0 3000 0 ABS 0 - comp\main.o
+__S1 21 0 ABS 0 - comp\main.o
+__S2 0 0 ABS 0 - comp\main.o
+__S4 0 0 ABS 0 - comp\main.o
+__S5 0 0 ABS 0 - comp\main.o
+_config 2D02 0 CODE 0 text8 comp\main.o
+__Lbigdata 0 0 BIGRAM 1 bigdata comp\main.o
+__Hnvrram 0 0 COMRAM 1 nvrram comp\main.o
+__Lintentry 0 0 ABS 0 intentry comp\main.o
+?_CRC_calc 1 0 COMRAM 1 cstackCOMRAMh comp\main.o
+__Hramtop 800 0 RAM 0 ramtop comp\main.o
+__Hrparam 0 0 COMRAM 1 rparam comp\main.o
+__activetblptr 0 0 ABS 0 - comp\main.o
+__Hstruct 0 0 COMRAM 1 struct comp\main.o
+__Htext10 0 0 ABS 0 text10 comp\main.o
+__Htext11 0 0 ABS 0 text11 comp\main.o
+__Htext12 0 0 ABS 0 text12 comp\main.o
+_RCSTAbits FAB 0 ABS 0 - comp\main.o
+__pnvCOMRAMh 1F 0 COMRAM 1 nvCOMRAMh comp\main.o
+__ptext10 2D0E 0 CODE 0 text10 comp\main.o
+__ptext11 2D4A 0 CODE 0 text11 comp\main.o
+__ptext12 2D6A 0 CODE 0 text12 comp\main.o
+__size_of_config 0 0 ABS 0 - comp\main.o
+MODBUS_RW@FC F 0 COMRAM 1 cstackCOMRAMh comp\main.o
+__Lbigbss 0 0 BIGRAM 1 bigbss comp\main.o
+__Lbigram 0 0 ABS 0 bigram comp\main.o
+__Lcomram 0 0 ABS 0 comram comp\main.o
+__Lconfig 0 0 CONFIG 4 config comp\main.o
+_LATDbits F8C 0 ABS 0 - comp\main.o
+__Lfarbss 0 0 FARRAM 0 farbss comp\main.o
+__Lfardata 0 0 FARRAM 0 fardata comp\main.o
+isa$std 1 0 ABS 0 - comp\startup.o
+__end_of_MODBUS_RW 3000 0 CODE 0 text4 comp\main.o
+__end_of_MODBUS_RX 2E7E 0 CODE 0 text6 comp\main.o
+__end_of_MODBUS_TX 2E36 0 CODE 0 text5 comp\main.o
+stackhi 7FF 0 ABS 0 - comp\startup.o
+stacklo 60 0 ABS 0 - comp\startup.o
+__size_of_MODBUS_RW 0 0 ABS 0 - comp\main.o
+__size_of_MODBUS_RX 0 0 ABS 0 - comp\main.o
+__size_of_MODBUS_TX 0 0 ABS 0 - comp\main.o
+__Lintcode 4 0 CODE 0 intcode comp\main.o
+__Lintret 0 0 ABS 0 intret comp\main.o
+__Lirdata 0 0 CODE 0 irdata comp\main.o
+__Lspace_0 0 0 ABS 0 - comp\main.o
+__Lspace_1 0 0 ABS 0 - comp\main.o
+__Lspace_2 0 0 ABS 0 - comp\main.o
+__Lspace_4 0 0 ABS 0 - comp\main.o
+CRC_calc@CRC D 0 COMRAM 1 cstackCOMRAMh comp\main.o
+_PIR1bits F9E 0 ABS 0 - comp\main.o
+_MODBUS_RW 2F0A 0 CODE 0 text4 comp\main.o
+_MODBUS_RX 2E36 0 CODE 0 text6 comp\main.o
+_MODBUS_TX 2DF4 0 CODE 0 text5 comp\main.o
+end_of_initialization 2D08 0 CODE 0 cinit comp\main.o
+__Lnvrram 0 0 COMRAM 1 nvrram comp\main.o
+__Hintentry 0 0 ABS 0 intentry comp\main.o
+__size_of_GPIO_CONFIG 0 0 ABS 0 - comp\main.o
+__Hreset_vec 4 0 CODE 0 reset_vec comp\main.o
+__Lramtop 800 0 RAM 0 ramtop comp\main.o
+__Lrparam 0 0 COMRAM 1 rparam comp\main.o
+__pcinit 2D08 0 CODE 0 cinit comp\main.o
+__ptext0 2D1E 0 CODE 0 text0 comp\main.o
+__ptext1 2DBE 0 CODE 0 text1 comp\main.o
+__ptext2 2D8C 0 CODE 0 text2 comp\main.o
+__ptext3 2D16 0 CODE 0 text3 comp\main.o
+__ptext4 2F0A 0 CODE 0 text4 comp\main.o
+__ptext5 2DF4 0 CODE 0 text5 comp\main.o
+__ptext6 2E36 0 CODE 0 text6 comp\main.o
+__ptext7 2E7E 0 CODE 0 text7 comp\main.o
+__ptext8 2D02 0 CODE 0 text8 comp\main.o
+__ptext9 2D30 0 CODE 0 text9 comp\main.o
+__Lstruct 0 0 COMRAM 1 struct comp\main.o
+__LcstackCOMRAMh 0 0 ABS 0 cstackCOMRAMh comp\main.o
+__LcstackCOMRAMl 0 0 ABS 0 cstackCOMRAMl comp\main.o
+__Ltext10 0 0 ABS 0 text10 comp\main.o
+__Ltext11 0 0 ABS 0 text11 comp\main.o
+__Ltext12 0 0 ABS 0 text12 comp\main.o
+__ramtop 800 0 RAM 0 ramtop comp\startup.o
+__Lpowerup 4 0 CODE 0 powerup comp\main.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data comp\main.o
+__Lreset_vec 0 0 CODE 0 reset_vec comp\main.o
+_REG_CONFIG 2D4A 0 CODE 0 text11 comp\main.o
+___param_bank 0 0 ABS 0 - comp\main.o
+__Hbigdata 0 0 BIGRAM 1 bigdata comp\main.o
+__end_of__initialization 2D08 0 CODE 0 cinit comp\main.o
+__Libigdata 0 0 CODE 0 ibigdata comp\main.o
+__HcstackCOMRAMh 0 0 ABS 0 cstackCOMRAMh comp\main.o
+__HcstackCOMRAMl 0 0 ABS 0 cstackCOMRAMl comp\main.o
+__Lclrtext 0 0 ABS 0 clrtext comp\main.o
+_TXSTAbits FAC 0 ABS 0 - comp\main.o
+_SSPCON1 FC6 0 ABS 0 - comp\main.o
+_SSPSTAT FC7 0 ABS 0 - comp\main.o
+__end_of_loop 2DF4 0 CODE 0 text1 comp\main.o
+__end_of_main 2D30 0 CODE 0 text0 comp\main.o
+CRC_calc@i B 0 COMRAM 1 cstackCOMRAMh comp\main.o
+CRC_calc@j C 0 COMRAM 1 cstackCOMRAMh comp\main.o
+__size_of_REF_DIO 0 0 ABS 0 - comp\main.o
+_M_ADU 20 0 ABS 0 - comp\main.o
+_RCREG FAE 0 ABS 0 - comp\main.o
+_SPBRG FAF 0 ABS 0 - comp\main.o
+_T0CON FD5 0 ABS 0 - comp\main.o
+_SSPIF 7CF3 0 ABS 0 - comp\main.o
+_TMR0H FD7 0 ABS 0 - comp\main.o
+_TMR0L FD6 0 ABS 0 - comp\main.o
+_TRISA F92 0 ABS 0 - comp\main.o
+_TRISB F93 0 ABS 0 - comp\main.o
+_TRISC F94 0 ABS 0 - comp\main.o
+_TRISD F95 0 ABS 0 - comp\main.o
+_TRISE F96 0 ABS 0 - comp\main.o
+_TXREG FAD 0 ABS 0 - comp\main.o
+__HRAM 0 0 ABS 0 - comp\main.o
+__Hbss 0 0 RAM 1 bss comp\main.o
+__Hram 0 0 ABS 0 ram comp\main.o
+__Hsfr 0 0 ABS 0 sfr comp\main.o
+__LRAM 1 0 ABS 0 - comp\main.o
+__Lbss 0 0 RAM 1 bss comp\main.o
+__Lram 0 0 ABS 0 ram comp\main.o
+__Lsfr 0 0 ABS 0 sfr comp\main.o
+MODBUS_RW@CRC_s 18 0 COMRAM 1 cstackCOMRAMh comp\main.o
+_USART_init 2D30 0 CODE 0 text9 comp\main.o
+__initialization 2D08 0 CODE 0 cinit comp\main.o
+__end_of_REG_CONFIG 2D6A 0 CODE 0 text11 comp\main.o
+MODBUS_RW@slave 1A 0 COMRAM 1 cstackCOMRAMh comp\main.o
+__Hfardata 0 0 FARRAM 0 fardata comp\main.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst comp\main.o
+__HnvCOMRAMh 0 0 ABS 0 nvCOMRAMh comp\main.o
+__Lifardata 0 0 CODE 0 ifardata comp\main.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs comp\main.o
+__Hintcode 4 0 CODE 0 intcode comp\main.o
+MODBUS_RW@ADDR 10 0 COMRAM 1 cstackCOMRAMh comp\main.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 2D08 2D08 6 1
+text0 0 2D1E 2D1E 12 1
+text1 0 2DBE 2DBE 36 1
+text2 0 2D8C 2D8C 32 1
+text3 0 2D16 2D16 8 1
+text4 0 2F0A 2F0A F6 1
+text5 0 2DF4 2DF4 42 1
+text6 0 2E36 2E36 48 1
+text7 0 2E7E 2E7E 8C 1
+text8 0 2D02 2D02 6 1
+text9 0 2D30 2D30 1A 1
+text10 0 2D0E 2D0E 8 1
+text11 0 2D4A 2D4A 20 1
+text12 0 2D6A 2D6A 22 1
+reset_vec 0 0 0 8 1
+cstackCOMRAMh 1 1 1 20 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

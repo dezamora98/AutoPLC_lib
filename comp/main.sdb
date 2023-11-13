@@ -1,0 +1,382 @@
+[p GLOBOPT AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"35 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+[v _USART_ON USART_ON `T(v  1 e 1 0 ]
+"41
+[v _USART_OFF USART_OFF `T(v  1 e 1 0 ]
+"48
+[v _USART_init USART_init `(v  1 e 1 0 ]
+"126
+[v _REF_DIO REF_DIO `(v  1 e 1 0 ]
+"258
+[v _GPIO_CONFIG GPIO_CONFIG `T(v  1 e 1 0 ]
+"272
+[v _REG_CONFIG REG_CONFIG `T(v  1 e 1 0 ]
+"286
+[v _main main `(v  1 e 1 0 ]
+"62 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\sources\c90\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\sources\c90\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\sources\c90\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\sources\c90\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"19 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\sources\c90\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"10 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\sources\c90\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\sources\c90\common\Umul64.c
+[v ___omul __omul `(ul  1 e 4 0 ]
+"6 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+[v _config config `(v  1 e 1 0 ]
+"11
+[v _loop loop `(v  1 e 1 0 ]
+"4 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+[v _MODBUS_TX MODBUS_TX `(v  1 e 1 0 ]
+"25
+[v _MODBUS_RX MODBUS_RX `(uc  1 e 1 0 ]
+"65
+[v _MODBUS_RW MODBUS_RW `(ui  1 e 2 0 ]
+"111
+[v _CRC_calc CRC_calc `(ui  1 e 2 0 ]
+"77 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.h
+[v _DOUT DOUT `uc  1 e 1 @480 ]
+"91
+[v _DIN DIN `uc  1 e 1 @479 ]
+"108
+[v _SAIN SAIN `uc  1 e 1 @481 ]
+"129
+[v _AIN AIN `[0]uc  1 e 0 @496 ]
+"152
+[v _EAIN EAIN `ui  1 e 2 @486 ]
+"173
+[v _AOUT AOUT `[0]ui  1 e 0 @488 ]
+"2974 D:\DOCUMENTOS\PROGRAMAS_ESCUELA\xc8\v2.32\pic\include\proc\pic18f4550.h
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
+"3074
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+"3186
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+"3264
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S77 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"3291
+[s S86 . 1 `uc 1 LD0 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+`uc 1 LD2 1 0 :1:2 
+`uc 1 LD3 1 0 :1:3 
+`uc 1 LD4 1 0 :1:4 
+`uc 1 LD5 1 0 :1:5 
+`uc 1 LD6 1 0 :1:6 
+`uc 1 LD7 1 0 :1:7 
+]
+[u S95 . 1 `S77 1 . 1 0 `S86 1 . 1 0 ]
+[v _LATDbits LATDbits `VES95  1 e 1 @3980 ]
+"3376
+[v _LATE LATE `VEuc  1 e 1 @3981 ]
+"3428
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"3626
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"3848
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+[s S45 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"3876
+[s S52 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S59 . 1 `S45 1 . 1 0 `S52 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES59  1 e 1 @3988 ]
+"4002
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"4224
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+[s S565 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 SPPIF 1 0 :1:7 
+]
+"4493
+[s S574 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+[u S580 . 1 `S565 1 . 1 0 `S574 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES580  1 e 1 @3998 ]
+[s S117 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4978
+[s S126 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S129 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[s S132 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S135 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S138 . 1 `uc 1 RCD8 1 0 :1:0 
+]
+[u S140 . 1 `S117 1 . 1 0 `S126 1 . 1 0 `S129 1 . 1 0 `S132 1 . 1 0 `S135 1 . 1 0 `S138 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES140  1 e 1 @4011 ]
+[s S217 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"5186
+[s S226 . 1 `uc 1 TX9D1 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+`uc 1 BRGH1 1 0 :1:2 
+`uc 1 SENDB1 1 0 :1:3 
+`uc 1 SYNC1 1 0 :1:4 
+`uc 1 TXEN1 1 0 :1:5 
+`uc 1 TX91 1 0 :1:6 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S235 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S238 . 1 `uc 1 TXD8 1 0 :1:0 
+]
+[u S240 . 1 `S217 1 . 1 0 `S226 1 . 1 0 `S235 1 . 1 0 `S238 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES240  1 e 1 @4012 ]
+"5403
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"5415
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"5427
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+"5439
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
+[s S171 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 TXCKP 1 0 :1:4 
+`uc 1 RXDTP 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"6099
+[s S180 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCMT 1 0 :1:6 
+]
+[s S185 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RXCKP 1 0 :1:5 
+]
+[s S188 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 W4E 1 0 :1:1 
+]
+[u S191 . 1 `S171 1 . 1 0 `S180 1 . 1 0 `S185 1 . 1 0 `S188 1 . 1 0 ]
+[v _BAUDCONbits BAUDCONbits `VES191  1 e 1 @4024 ]
+"6511
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"6582
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"6869
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
+"6939
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
+"7194
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
+"8070
+[v _T0CON T0CON `VEuc  1 e 1 @4053 ]
+[s S537 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"8090
+[s S544 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S548 . 1 `S537 1 . 1 0 `S544 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES548  1 e 1 @4053 ]
+"8147
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"8154
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+[s S486 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"8615
+[s S495 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S504 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S508 . 1 `S486 1 . 1 0 `S495 1 . 1 0 `S504 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES508  1 e 1 @4082 ]
+"10645
+[v _SSPIF SSPIF `VEb  1 e 0 @31987 ]
+"4 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+[v _Z Z `VEui  1 e 2 0 ]
+"26 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.h
+[v _M_ADU M_ADU `[0]uc  1 e 0 @32 ]
+"286 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+[v _main main `(v  1 e 1 0 ]
+{
+"309
+} 0
+"11 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+[v _loop loop `(v  1 e 1 0 ]
+{
+"19
+} 0
+"126 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+[v _REF_DIO REF_DIO `(v  1 e 1 0 ]
+{
+"154
+} 0
+"41
+[v _USART_OFF USART_OFF `T(v  1 e 1 0 ]
+{
+"46
+} 0
+"65 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\MODBUS_RTU_APLC.c
+[v _MODBUS_RW MODBUS_RW `(ui  1 e 2 0 ]
+{
+[v MODBUS_RW@slave slave `uc  1 a 1 wreg ]
+"69
+[v MODBUS_RW@C_byte C_byte `ui  1 a 2 28 ]
+"67
+[v MODBUS_RW@CRC CRC `ui  1 a 2 26 ]
+"68
+[v MODBUS_RW@CRC_s CRC_s `ui  1 a 2 23 ]
+"65
+[v MODBUS_RW@slave slave `uc  1 a 1 wreg ]
+[v MODBUS_RW@FC FC `uc  1 p 1 14 ]
+[v MODBUS_RW@ADDR ADDR `ui  1 p 2 15 ]
+[v MODBUS_RW@N N `ui  1 p 2 17 ]
+[v MODBUS_RW@slave slave `uc  1 a 1 25 ]
+"109
+} 0
+"4
+[v _MODBUS_TX MODBUS_TX `(v  1 e 1 0 ]
+{
+[v MODBUS_TX@M_size M_size `uc  1 a 1 wreg ]
+"6
+[v MODBUS_TX@i i `uc  1 a 1 1 ]
+"4
+[v MODBUS_TX@M_size M_size `uc  1 a 1 wreg ]
+"8
+[v MODBUS_TX@M_size M_size `uc  1 a 1 0 ]
+"23
+} 0
+"25
+[v _MODBUS_RX MODBUS_RX `(uc  1 e 1 0 ]
+{
+"27
+[v MODBUS_RX@i i `uc  1 a 1 0 ]
+"63
+} 0
+"111
+[v _CRC_calc CRC_calc `(ui  1 e 2 0 ]
+{
+[v CRC_calc@size size `uc  1 a 1 wreg ]
+"113
+[v CRC_calc@CRC CRC `ui  1 a 2 12 ]
+"114
+[v CRC_calc@j j `uc  1 a 1 11 ]
+[v CRC_calc@i i `uc  1 a 1 10 ]
+"111
+[v CRC_calc@size size `uc  1 a 1 wreg ]
+"113
+[v CRC_calc@size size `uc  1 a 1 9 ]
+"130
+} 0
+"6 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\main.c
+[v _config config `(v  1 e 1 0 ]
+{
+"9
+} 0
+"48 D:\DOCUMENTOS\UNIVERSIDAD\CURSOS AUTOMATICA\TESIS\Daniel\pro\firmware\AutoPLC_lib\AutoPLC.c
+[v _USART_init USART_init `(v  1 e 1 0 ]
+{
+"74
+} 0
+"35
+[v _USART_ON USART_ON `T(v  1 e 1 0 ]
+{
+"40
+} 0
+"272
+[v _REG_CONFIG REG_CONFIG `T(v  1 e 1 0 ]
+{
+"281
+} 0
+"258
+[v _GPIO_CONFIG GPIO_CONFIG `T(v  1 e 1 0 ]
+{
+"271
+} 0

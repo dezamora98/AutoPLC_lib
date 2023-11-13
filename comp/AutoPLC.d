@@ -1,0 +1,1 @@
+ comp/AutoPLC.d  comp/AutoPLC.p1:  AutoPLC.c AutoPLC.h AutoPLC_config.h fuses.h

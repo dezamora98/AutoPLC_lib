@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "XC8",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/DOCUMENTOS/PROGRAMAS_ESCUELA/xc8/v2.32/pic/include"
+            ],
+            "defines": [
+                "UNICODE",
+                "_UNICODE"
+            ]
+        }
+    ],
+    "version": 4
+}
